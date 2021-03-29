@@ -39,4 +39,9 @@ class WeatherFragment  : Fragment() {
         MyApplication().appComponent.inject(this)
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewmodel.dispose()
+    }
 }
